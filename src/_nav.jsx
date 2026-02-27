@@ -55,6 +55,12 @@ export const getNavigation = (role) => {
         to: "/admin-dashboard/escrow",
         icon: <CIcon icon={cilChart} customClassName="nav-icon" />,
       },
+      {
+        component: CNavItem,
+        name: "Approvals",
+        to: "/admin-dashboard/approvals",
+        icon: <CIcon icon={cilChart} customClassName="nav-icon" />,
+      },
     ];
   }
 
