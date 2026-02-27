@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const API_URL = "http://localhost:5001"; // Adjust as needed
+const API_URL = "https://carbon-credit-backend-j16p.onrender.com"; // Adjust as needed
 
 
 // Login API Call
