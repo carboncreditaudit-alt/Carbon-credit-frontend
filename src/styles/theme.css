@@ -102,3 +102,71 @@
 .header-shadow {
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
+/* Approval Card Styles */
+.approval-card {
+  border: 1px solid rgba(218, 215, 205, 0.3);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.approval-card:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 12px rgba(52, 78, 65, 0.08);
+  border-color: rgba(88, 129, 87, 0.2);
+}
+
+/* Rotate animation */
+.rotate-90 {
+  transform: rotate(90deg);
+  transition: transform 0.3s;
+}
+
+/* Header styles (matching your existing green theme) */
+.header-green {
+  background-color: #344e41 !important;
+  color: white !important;
+}
+
+.header-green .nav-link {
+  color: #dad7cd !important;
+}
+
+.header-green .nav-link:hover {
+  color: white !important;
+}
+
+/* Sidebar styles */
+.sidebar-green {
+  background-color: #2a3f35 !important;
+}
+
+.sidebar-green .nav-link {
+  color: #dad7cd !important;
+}
+
+.sidebar-green .nav-link.active {
+  background-color: #588157 !important;
+  color: white !important;
+}
+
+.sidebar-green .nav-link:hover {
+  background-color: #3a5a40 !important;
+  color: white !important;
+}
+
+/* Footer styles */
+.footer-green {
+  background-color: #344e41 !important;
+  color: #dad7cd !important;
+}
+
+.footer-green a {
+  color: #a3b18a !important;
+  text-decoration: none;
+}
+
+.footer-green a:hover {
+  color: white !important;
+  text-decoration: underline;
+}

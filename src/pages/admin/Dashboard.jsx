@@ -9,7 +9,6 @@ const Dashboard = () => {
           Dashboard Overview
         </h1>
       </div>
-
     </div>
   );
 };

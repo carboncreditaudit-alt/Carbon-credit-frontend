@@ -1,0 +1,139 @@
+/* Admin Dashboard Styles */
+.admin-dashboard {
+  background-color: #f8faf8;
+  min-height: 100vh;
+  padding: 1.5rem 0;
+}
+
+/* Sidebar Styles */
+.admin-sidebar {
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  background: white;
+  position: sticky;
+  top: 1rem;
+}
+
+.sidebar-title {
+  color: #344e41;
+  font-weight: 600;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #dad7cd;
+}
+
+.admin-sidebar .nav-link {
+  transition: all 0.2s;
+}
+
+.admin-sidebar .nav-link:hover {
+  background-color: #f0f7f0 !important;
+  transform: translateX(4px);
+}
+
+.admin-sidebar .nav-link.active {
+  background-color: #588157 !important;
+  color: white !important;
+  box-shadow: 0 4px 8px rgba(88, 129, 87, 0.2);
+}
+
+/* Main Content Styles */
+.admin-content {
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.admin-content .card-header {
+  background-color: white;
+  border-bottom: 2px solid #dad7cd;
+  padding: 1.25rem 1.5rem;
+}
+
+/* Stats Cards */
+.card.bg-light {
+  background-color: white !important;
+  border: 1px solid rgba(218, 215, 205, 0.3);
+  border-radius: 1rem;
+  transition: all 0.3s;
+}
+
+.card.bg-light:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(52, 78, 65, 0.08);
+  border-color: rgba(88, 129, 87, 0.2);
+}
+
+/* Table Styles */
+.table {
+  margin-bottom: 0;
+}
+
+.table thead th {
+  border-bottom: 2px solid #dad7cd;
+  color: #344e41;
+  font-weight: 600;
+  padding: 1rem;
+}
+
+.table tbody td {
+  padding: 1rem;
+  color: #344e41;
+  border-bottom: 1px solid #dad7cd;
+}
+
+.table tbody tr:hover {
+  background-color: #f8faf8;
+}
+
+/* Badge Styles */
+.badge {
+  padding: 0.5rem 0.75rem;
+  font-weight: 500;
+  border-radius: 2rem;
+}
+
+.badge.bg-success {
+  background-color: #588157 !important;
+}
+
+.badge.bg-warning {
+  background-color: #f39c12 !important;
+  color: white;
+}
+
+.badge.bg-info {
+  background-color: #a3b18a !important;
+}
+
+.badge.bg-danger {
+  background-color: #e74c3c !important;
+}
+
+/* Progress Bar */
+.progress {
+  background-color: #dad7cd;
+  border-radius: 1rem;
+  height: 0.75rem;
+}
+
+.progress-bar {
+  background-color: #588157;
+  border-radius: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admin-dashboard {
+    padding: 1rem;
+  }
+  
+  .admin-sidebar {
+    position: static;
+    margin-bottom: 1rem;
+  }
+  
+  .table {
+    font-size: 0.9rem;
+  }
+}
