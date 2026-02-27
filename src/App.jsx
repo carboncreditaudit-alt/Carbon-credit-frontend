@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
 import AppRoutes from "./routes";
@@ -9,21 +9,28 @@ import "@coreui/coreui/dist/css/coreui.min.css";
 import "@coreui/icons/css/all.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+function RouteDebugger() {
+  const location = useLocation();
+  console.log("CURRENT ROUTE:", location.pathname);
+  return null;
+}
+
 const App = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const dispatch = useDispatch();
 
-  const [loading, setLoading] = useState(true);
+  const [initialized, setInitialized] = useState(false);
 
   useEffect(() => {
-    const initUser = () => {
-      const storedUser = JSON.parse(localStorage.getItem("user"));
+    const storedUser = JSON.parse(localStorage.getItem("user"));
 
-      if (storedUser?.user?.role) {
-        const role = storedUser.user.role.toLowerCase();
+    if (storedUser?.user?.role) {
+      const role = storedUser.user.role.toLowerCase();
+      dispatch(setUserRole(role));
 
-        dispatch(setUserRole(role));
-
+      // ✅ Redirect ONLY if user is on public entry pages
+      if (location.pathname === "/" || location.pathname === "/login") {
         const roleToRoute = {
           admin: "/admin-dashboard",
           farmer: "/farmer-dashboard",
@@ -31,21 +38,20 @@ const App = () => {
           company: "/company-dashboard",
         };
 
-        navigate(roleToRoute[role] || "/", { replace: true });
+        navigate(roleToRoute[role], { replace: true });
       }
+    }
 
-      setLoading(false);
-    };
+    setInitialized(true);
+  }, []); // 🚫 no navigate or location deps (prevents loop)
 
-    initUser();
-  }, [dispatch, navigate]);
-
-  if (loading) {
+  if (!initialized) {
     return <div className="p-3">Loading...</div>;
   }
 
   return (
     <>
+      <RouteDebugger />
       <AppRoutes />
     </>
   );
