@@ -1,0 +1,92 @@
+.card {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  height: 100%;
+}
+
+.title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1e3a5f;
+  margin-bottom: 1.5rem;
+}
+
+.meterContainer {
+  margin-bottom: 1.5rem;
+}
+
+.meter {
+  height: 30px;
+  background: #dad7cd;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.ownedBar {
+  height: 100%;
+  background: #1e3a5f;
+  transition: width 0.3s ease;
+}
+
+.retiredBar {
+  height: 100%;
+  background: #588157;
+  transition: width 0.3s ease;
+}
+
+.legend {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #344e41;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.dot.owned {
+  background: #1e3a5f;
+}
+
+.dot.retired {
+  background: #588157;
+}
+
+.dot.total {
+  background: #dad7cd;
+}
+
+.footer {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #dad7cd;
+}
+
+.viewDetails {
+  background: none;
+  border: none;
+  color: #1e3a5f;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.viewDetails:hover {
+  color: #588157;
+  transform: translateX(4px);
+}

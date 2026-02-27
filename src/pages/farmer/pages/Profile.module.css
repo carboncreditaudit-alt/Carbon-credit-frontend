@@ -1,0 +1,221 @@
+.container {
+  width: 100%;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: none;
+  color: #588157;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  transition: all 0.2s;
+  margin-bottom: 1rem;
+}
+
+.backButton:hover {
+  background: #f0f7f0;
+  transform: translateX(-4px);
+}
+
+.backIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.profileHeader {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(218, 215, 205, 0.3);
+}
+
+.avatarSection {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 1.5rem;
+  border: 3px solid #dad7cd;
+}
+
+.editAvatarBtn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #588157;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.editAvatarBtn:hover {
+  background: #3a5a40;
+  transform: scale(1.1);
+}
+
+.editAvatarBtn img {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) invert(1);
+}
+
+.profileInfo {
+  flex: 1;
+}
+
+.name {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #344e41;
+  margin: 0 0 0.5rem 0;
+}
+
+.role {
+  font-size: 1rem;
+  color: #588157;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.location, .joined {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.statCard {
+  background: white;
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(218, 215, 205, 0.3);
+  transition: all 0.3s;
+}
+
+.statCard:hover {
+  transform: translateY(-2px);
+  border-color: rgba(88, 129, 87, 0.2);
+  box-shadow: 0 8px 24px rgba(52, 78, 65, 0.08);
+}
+
+.statIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+}
+
+.statContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.statValue {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #588157;
+  line-height: 1.2;
+}
+
+.statLabel {
+  font-size: 0.85rem;
+  color: #a3b18a;
+}
+
+.detailsCard {
+  background: white;
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(218, 215, 205, 0.3);
+}
+
+.detailsTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #344e41;
+  margin: 0 0 1.5rem 0;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #dad7cd;
+}
+
+.detailItem {
+  display: flex;
+  padding: 1rem 0;
+  border-bottom: 1px solid #dad7cd;
+}
+
+.detailItem:last-child {
+  border-bottom: none;
+}
+
+.detailLabel {
+  width: 120px;
+  font-size: 0.9rem;
+  color: #a3b18a;
+}
+
+.detailValue {
+  flex: 1;
+  font-size: 0.95rem;
+  color: #344e41;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .profileHeader {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .detailItem {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .detailLabel {
+    width: 100%;
+  }
+}

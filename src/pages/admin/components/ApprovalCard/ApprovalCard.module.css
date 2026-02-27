@@ -1,0 +1,199 @@
+.card {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
+  border-left: 4px solid transparent;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card.pending {
+  border-left-color: #f39c12;
+}
+
+.card.approved {
+  border-left-color: #588157;
+}
+
+.card.rejected {
+  border-left-color: #e74c3c;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.typeBadge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  border-radius: 2rem;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.typeIcon {
+  font-size: 1rem;
+}
+
+.date {
+  font-size: 0.8rem;
+  color: #a3b18a;
+}
+
+.cardBody {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.mainInfo {
+  flex: 1;
+}
+
+.name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #344e41;
+  margin-bottom: 0.5rem;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.email, .phone {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.statusBadge {
+  padding: 0.4rem 1rem;
+  border-radius: 2rem;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.expandedDetails {
+  margin: 1rem 0;
+  padding: 1rem;
+  background: #f8faf8;
+  border-radius: 0.5rem;
+}
+
+.detailsTitle {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #344e41;
+  margin-bottom: 0.75rem;
+}
+
+.detailRow {
+  display: flex;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #dad7cd;
+}
+
+.detailRow:last-child {
+  border-bottom: none;
+}
+
+.detailLabel {
+  width: 120px;
+  font-size: 0.85rem;
+  color: #a3b18a;
+}
+
+.detailValue {
+  flex: 1;
+  font-size: 0.85rem;
+  color: #344e41;
+  font-weight: 500;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #dad7cd;
+}
+
+.expandBtn {
+  background: transparent;
+  border: none;
+  color: #588157;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.expandBtn:hover {
+  text-decoration: underline;
+}
+
+.actionBtns {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.approveBtn, .rejectBtn {
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.approveBtn {
+  background: #588157;
+  color: white;
+}
+
+.approveBtn:hover {
+  background: #3a5a40;
+  transform: scale(1.02);
+}
+
+.rejectBtn {
+  background: #e74c3c;
+  color: white;
+}
+
+.rejectBtn:hover {
+  background: #c0392b;
+  transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  .cardBody {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .actionBtns {
+    width: 100%;
+  }
+  
+  .cardFooter {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

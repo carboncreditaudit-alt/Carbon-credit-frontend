@@ -1,0 +1,143 @@
+.card {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 20px rgba(58, 90, 64, 0.15);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.avatar {
+  font-size: 2.5rem;
+}
+
+.status {
+  padding: 0.25rem 0.75rem;
+  border-radius: 2rem;
+  color: white;
+  font-size: 0.75rem;
+  text-transform: capitalize;
+}
+
+.status.active {
+  background: #588157;
+}
+
+.status.pending {
+  background: #a3b18a;
+}
+
+.name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #344e41;
+  margin-bottom: 0.25rem;
+}
+
+.village {
+  font-size: 0.9rem;
+  color: #a3b18a;
+  margin-bottom: 1rem;
+}
+
+.stats {
+  display: flex;
+  gap: 2rem;
+  margin: 1rem 0;
+  padding: 1rem 0;
+  border-top: 1px solid #dad7cd;
+  border-bottom: 1px solid #dad7cd;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.statValue {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #344e41;
+}
+
+.statLabel {
+  font-size: 0.75rem;
+  color: #a3b18a;
+}
+
+.footer {
+  margin-top: 1rem;
+}
+
+.viewBtn {
+  background: transparent;
+  border: 1px solid #588157;
+  color: #588157;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.viewBtn:hover {
+  background: #588157;
+  color: white;
+}
+
+/* Compact Card */
+.compactCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background: #f8faf8;
+  transition: all 0.2s;
+}
+
+.compactCard:hover {
+  background: #f0f5f0;
+}
+
+.compactInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.compactName {
+  font-weight: 500;
+  color: #344e41;
+}
+
+.compactVillage {
+  font-size: 0.75rem;
+  color: #a3b18a;
+}
+
+.statusBadge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 1rem;
+  font-size: 0.7rem;
+  color: white;
+  text-transform: capitalize;
+}
+
+.statusBadge.active {
+  background: #588157;
+}
+
+.statusBadge.pending {
+  background: #a3b18a;
+}
