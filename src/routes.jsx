@@ -5,37 +5,104 @@ import ProtectedRoute from "./components/ProtectedRoute";
 
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
-import AdminDashboard from "./pages/admin/Dashboard";
-import FarmerDashboard from "./pages/farmer/Dashboard";
-import CompanyDashboard from "./pages/company/Dashboard";
-import NgoDashboard from "./pages/ngo/Dashboard";
 import AboutUs from "./pages/AboutUs";
+
+// Admin
+import AdminDashboard from "./pages/admin/Dashboard";
+import Approvals from "./pages/admin/Approvals";
+
+// Farmer
+import FarmerDashboard from "./pages/farmer/Dashboard";
+
+// Company
+import CompanyDashboard from "./pages/company/Dashboard";
+
+// NGO
+import NgoDashboard from "./pages/ngo/Dashboard";
 
 const AppRoutes = () => {
   return (
     <Routes>
-      {/* 🌐 Public */}
+      {/* 🌐 PUBLIC */}
       <Route path="/" element={<HomePage />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/about-us" element={<AboutUs />} />
 
-      {/* 🧱 Dashboard Layout */}
+      {/* 🧱 DASHBOARD LAYOUT */}
       <Route element={<DashboardLayout />}>
-       
 
-        <Route path="/admin-dashboard" element={<ProtectedRoute roles={["admin"]}><AdminDashboard /></ProtectedRoute>} />
-        
-        <Route path="/farmer-dashboard" element={<ProtectedRoute roles={["farmer"]}><FarmerDashboard /></ProtectedRoute>} />
-     
-        <Route path="/company-dashboard" element={<ProtectedRoute roles={["company"]}><CompanyDashboard /></ProtectedRoute>} />
+        {/* ================= ADMIN ================= */}
+        <Route path="admin-dashboard">
+          <Route
+            index
+            element={
+              <ProtectedRoute roles={["admin"]}>
+                <AdminDashboard />
+              </ProtectedRoute>
+            }
+          />
 
-        <Route path="/ngo-dashboard" element={<ProtectedRoute roles={["ngo"]}><NgoDashboard /></ProtectedRoute>} />
-    
+          <Route
+            path="approvals"
+            element={
+              <ProtectedRoute roles={["admin"]}>
+                <Approvals />
+              </ProtectedRoute>
+            }
+          />
+
+          {/* 👉 future routes */}
+          {/* <Route path="users" element={<Users />} /> */}
+          {/* <Route path="reports" element={<Reports />} /> */}
+        </Route>
+
+        {/* ================= FARMER ================= */}
+        <Route path="farmer-dashboard">
+          <Route
+            index
+            element={
+              <ProtectedRoute roles={["farmer"]}>
+                <FarmerDashboard />
+              </ProtectedRoute>
+            }
+          />
+        </Route>
+
+        {/* ================= COMPANY ================= */}
+        <Route path="company-dashboard">
+          <Route
+            index
+            element={
+              <ProtectedRoute roles={["company"]}>
+                <CompanyDashboard />
+              </ProtectedRoute>
+            }
+          />
+        </Route>
+
+        {/* ================= NGO ================= */}
+        <Route path="ngo-dashboard">
+          <Route
+            index
+            element={
+              <ProtectedRoute roles={["ngo"]}>
+                <NgoDashboard />
+              </ProtectedRoute>
+            }
+          />
+        </Route>
 
       </Route>
 
       {/* ❌ 404 */}
-      <Route path="*" element={<div className="h-screen flex items-center justify-center text-2xl font-semibold">404 — Page Not Found</div>} />
+      <Route
+        path="*"
+        element={
+          <div className="d-flex vh-100 align-items-center justify-content-center fs-3 fw-semibold">
+            404 — Page Not Found
+          </div>
+        }
+      />
     </Routes>
   );
 };
