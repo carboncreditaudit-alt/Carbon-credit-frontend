@@ -1,0 +1,104 @@
+/* ===== SIDEBAR GREEN ===== */
+.sidebar-green {
+  background-color: #084a2b !important; /* Bootstrap success green */
+  color: #fff;
+}
+
+.sidebar-green .nav-link {
+  color: #e9f7ef;
+}
+
+.sidebar-green .nav-link:hover {
+  background-color: #157347;
+  color: #fff;
+}
+
+.sidebar-green .nav-group-toggle {
+  color: #fff;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-wrapper {
+  background-color: #ffffff;
+  min-height: 100vh;
+  padding: 16px;
+}
+
+/* ===== FOOTER GREEN ===== */
+.footer-green {
+  background-color: #1e6745;
+  color: #fff;
+  border-top: none;
+}
+
+.footer-green a {
+  color: #e9f7ef;
+  text-decoration: none;
+}
+
+.footer-green a:hover {
+  color: #fff;
+}
+
+/* ================= SIDEBAR GREEN ================= */
+
+.sidebar-green {
+  background-color: #105032;
+  color: #fff;
+}
+
+/* nav links */
+.sidebar-green .nav-link {
+  color: #e9f7ef;
+  border-radius: 6px;
+  margin: 2px 8px;
+}
+
+.sidebar-green .nav-link:hover {
+  background-color: #157347;
+  color: #fff;
+}
+
+/* active route */
+.sidebar-green .nav-link.active {
+  background-color: #145c32;
+  color: #fff;
+  font-weight: 500;
+}
+
+/* group toggles */
+.sidebar-green .nav-group-toggle {
+  color: #fff;
+}
+
+/* nav bullet */
+.sidebar-green .nav-icon-bullet {
+  background-color: #d1e7dd;
+}
+
+/* ===== GREEN HEADER THEME ===== */
+
+.header-green {
+  background-color: #0c6139 !important;
+  color: #ffffff;
+  border-bottom: none;
+}
+
+/* text + icons */
+.header-green .nav-link {
+  color: #ffffff;
+}
+
+.header-green .nav-link:hover {
+  color: #d1e7dd;
+}
+
+/* toggler icon */
+.header-green .c-header-toggler {
+  color: #ffffff;
+}
+
+/* shadow on scroll */
+.header-shadow {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
